@@ -1,0 +1,10 @@
+ebooklib==0.18
+html2text==2024.2.26
+lxml==5.3.0
+packaging==24.2
+pdf2image==1.17.0
+pillow==11.0.0
+pypdf2==3.0.1
+pytesseract==0.3.13
+six==1.16.0
+tqdm==4.67.0

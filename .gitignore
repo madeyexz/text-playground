@@ -1,0 +1,23 @@
+# venv
+.venv/
+
+# inputs
+*.pdf
+*.epub
+
+# input folders
+epub/*
+pdf/*
+
+# outputs
+*.md
+
+# output folders
+md/
+harry_chapters/
+buffett/
+prize_chapters/
+Trillion Dollar Coach_chapters/
+
+# misc
+.DS_Store
