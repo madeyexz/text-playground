@@ -104,8 +104,8 @@ def main():
     parser = argparse.ArgumentParser(description='Convert PDF or EPUB to Markdown in one step')
     parser.add_argument('input_file', help='Path to the PDF or EPUB file')
     parser.add_argument('-o', '--output', help='Path to save the output markdown file')
-    parser.add_argument('-d', '--dpi', type=int, default=300, help='DPI for PDF to image conversion')
-    parser.add_argument('-l', '--language', help='Language code for OCR (auto-detect if not specified)')
+    parser.add_argument('-d', '--dpi', type=int, default=500, help='DPI for PDF to image conversion')
+    parser.add_argument('-l', '--language', default='chi_sim', help='Language code for OCR (default: chi_sim - Simplified Chinese)')
     parser.add_argument('-p', '--pages', nargs=2, type=int, metavar=('START', 'END'), 
                         help='Range of pages to process (only for PDF)')
     parser.add_argument('--no-preprocess', action='store_true', help='Disable image preprocessing')
