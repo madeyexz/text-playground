@@ -1,6 +1,6 @@
 # text-playground
 
-A playground for text processing tools including OCR text extraction, PDF/EPUB to Markdown conversion, and AI-powered (openai) file-based summarization. These utilities support multiple languages and can be used individually or combined into workflows for document conversion and content processing.
+A bunch of tools for text processing including OCR text extraction, PDF/EPUB to Markdown conversion, and AI-powered (openai) file-based summarization. These utilities support multiple languages and can be used individually or combined into workflows for document conversion and content processing.
 
 
 Created for my personal use, but PRs are welcomed!
