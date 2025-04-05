@@ -1,6 +1,9 @@
-# PDF and EPUB to Markdown Converter
+# text-playground
 
-This repository contains a collection of tools for converting PDF and EPUB documents to Markdown format. It provides comprehensive functionality for extracting text from various document formats, performing OCR (Optical Character Recognition) on scanned documents, converting raw text to well-formatted Markdown, and processing the resulting Markdown files (splitting into chapters, summarizing content, etc.). The toolset supports various languages and is designed to handle both simple conversions and complex document processing workflows.
+A playground for text processing tools including OCR text extraction, PDF/EPUB to Markdown conversion, and AI-powered (openai) file-based summarization. These utilities support multiple languages and can be used individually or combined into workflows for document conversion and content processing.
+
+
+Created for my personal use, but PRs are welcomed!
 
 ## Core Files
 
