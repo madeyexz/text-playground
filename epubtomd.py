@@ -69,6 +69,6 @@ def epub_to_markdown(epub_path, output_dir):
     print(f"Conversion complete. Output file: {main_md_file}")
 
 # epub_file = "./epub/IntelligenceAnalysis.epub"
-epub_file = "/Users/ianhsiao/Developer/Covert_Epub_and_PDF_to_Markdown/epub/harry.epub"
+epub_file = "/Users/ianhsiao/Developer/Covert_Epub_and_PDF_to_Markdown/epub/improv.epub"
 output_directory = "/Users/ianhsiao/Developer/Covert_Epub_and_PDF_to_Markdown/"
 epub_to_markdown(epub_file, output_directory)

@@ -1,6 +1,7 @@
 import os
 import re
 from PyPDF2 import PdfReader
+import argparse
 
 def clean_text(text):
     text = re.sub(r'\s+', ' ', text)
@@ -20,7 +21,10 @@ def format_paragraph(paragraph):
     sentences = re.split(r'(?<=[.!?])\s+', paragraph)
     return ' '.join(sentences)
 
-def pdf_to_markdown(pdf_path, output_dir):
+def pdf_to_markdown(pdf_path, output_dir=None):
+    if output_dir is None:
+        output_dir = os.path.dirname(pdf_path)
+    
     reader = PdfReader(pdf_path)
     
     os.makedirs(output_dir, exist_ok=True)
@@ -45,6 +49,14 @@ def pdf_to_markdown(pdf_path, output_dir):
     
     print(f"Conversion complete. Output file: {main_md_file}")
 
-pdf_file = "/Users/ianhsiao/Developer/Covert_Epub_and_PDF_to_Markdown/pdf/eur.pdf"
-output_directory = "./md"
-pdf_to_markdown(pdf_file, output_directory)
+def main():
+    parser = argparse.ArgumentParser(description='Convert PDF to Markdown')
+    parser.add_argument('input_file', help='Path to the input PDF file')
+    parser.add_argument('output_dir', nargs='?', default=None, 
+                       help='Output directory (optional, defaults to input file directory)')
+    
+    args = parser.parse_args()
+    pdf_to_markdown(args.input_file, args.output_dir)
+
+if __name__ == '__main__':
+    main()
