@@ -8,7 +8,7 @@ from asyncio import Semaphore
 from dotenv import load_dotenv
 from typing import Tuple
 
-model_name = "o1-mini"
+model_name = "o3-mini"
 
 def read_markdown_file(file_path: Path) -> str:
     with open(file_path, 'r', encoding='utf-8') as f:
@@ -20,7 +20,7 @@ async def generate_summary(content: str, semaphore: Semaphore, client: AsyncOpen
             model=model_name,
             messages=[
                 # {"role": "user", "content": f"請幫我完整總結這個逐字稿的內容。在總結的方式上，請用階層式的列點架構，讓我知道這裡探討了哪些主題、每個主題有哪些觀點、洞見，每個觀點或洞見都有哪些重要的例子、論證或論據。\n\n{content}"},
-                {"role": "user", "content": f"請幫我用 markdown 格式整理下面的课程笔记。盡可能保持原來的知識結構。在適當的地方進行補充增加完整性。除了筆記整理的結果，不要輸出任何東西。不要使用 code block 格式。\n\n{content}"},
+                {"role": "user", "content": f"\n\n{content}"},
             ]
         )
         return response.choices[0].message.content
