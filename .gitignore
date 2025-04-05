@@ -9,9 +9,6 @@
 *.epub
 
 
-# outputs
-*.md
-
 # misc
 .DS_Store
 __pycache__/
